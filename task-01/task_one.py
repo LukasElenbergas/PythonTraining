@@ -3,13 +3,10 @@ import re
 from typing import List
 
 
-def run(file_name: str) -> int:
+def part_one(file_name: str, correct_nums: List) -> int:
     # Open the inputs file and format the input into a list
     with open(os.path.join('inputs', file_name)) as inp:
         contents = inp.read().split('\n')
-
-    # Array to hold numbers to be added
-    correct_nums = []
 
     # For loop to get position of each line and numbers extracted using regular expression
     for index, line in enumerate(contents):
@@ -36,5 +33,5 @@ def run(file_name: str) -> int:
 
 
 if __name__ == '__main__':
-    print(run('example_input.txt'))
-    print(run('actual_imput.txt'))
+    print(part_one('example_input.txt', []))
+    print(part_one('actual_imput.txt', []))
